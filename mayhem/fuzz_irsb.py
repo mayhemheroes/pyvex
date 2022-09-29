@@ -38,7 +38,7 @@ def TestOneInput(data):
         with nostdout():
             for arch in available_arches:
                 curr_data = fdp.ConsumeBytes(fdp.ConsumeIntInRange(0, 250))
-                irsb = pyvex.IRSB(data=data, mem_addr=0, arch=arch)
+                irsb = pyvex.IRSB(data=curr_data, mem_addr=0, arch=arch)
                 stmts = irsb.statements
     except pyvex.PyVEXError:
         pass
