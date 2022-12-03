@@ -1,0 +1,6 @@
+project: pyvex
+target: irsb-fuzz
+
+cmds:
+  - cmd: /fuzz_irsb.py
+    libfuzzer: true
